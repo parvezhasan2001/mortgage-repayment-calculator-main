@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <div class="calculator-container">
+      <div class="calculator-left">
+        <h1>
+          Mortgage Calculator
+          <a href="#" onclick="clearAll()">Clear All</a>
+        </h1>
+        <div class="input-group">
+          <label for="mortgage-amount">Mortgage Amount</label>
+            <div class="wrapping-span-input">
+              <span class="symbol">£</span>
+              <input
+                type="text"
+                id="mortgage-amount"
+                placeholder="e.g. 100,000"
+                required
+              />
+            </div>
+        </div>
+        <div class="input-row">
+          <div class="input-group">
+            <label for="term">Mortgage Term</label>
+            <div class="wrapping-mortgage-input1">
+              <input
+                type="text"
+                id="term"
+                placeholder="e.g. 20,000"
+                required
+              />
+              <span class="years">years</span>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="interest-rate">Interest Rate</label>
+            <div class="wrapping-mortgage-input2">
+              <input
+                type="text"
+                id="interest-rate"
+                placeholder="e.g. 3.5"
+                required
+              />
+              <span class="percentage">%</span>
+            </div>
+          </div>
+        </div>
+        <div class="mortgate-type-group">
+          <p>Mortgage Type</p>
+          <label class="mortgage-option">
+            <input type="radio" name="mortgageType" value="repayment" checked />
+            <span>Repayment</span>
+          </label>
+
+          <label class="mortgage-option">
+            <input type="radio" name="mortgageType" value="interestOnly" />
+            <span>Interest Only</span>
+          </label>
+        </div>
+        <button class="calculate-btn" onclick="Calculate()">
+          Calculate Repayments
+        </button>
+      </div>
+      <div class="calculator-right">
+        <h2>Your results</h2>
+        <p>
+          Your results shown below based on the information you provided. To
+          adjust the results, edit the form and click “calculate repayments”
+          again.
+        </p>
+        <div class="result-box">
+          <div class="monthly_repayments">
+            <h3>Your monthly repayments</h3>
+            <span id="monthly-repayments">£0.00</span>
+          </div>
+          <div>
+            <h3>Total you'll repay over the term</h3>
+            <span id="total-repayable">£0.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mortgage Calculator
+  Clear All
+
+  Mortgage Amount
+
+  Mortgage Term
+
+  Interest Rate
+
+  Mortgage Type
+  Repayment
+  Interest Only
+
+  Calculate Repayments -->
+
+    <!-- Empty results start -->
+
+    <!-- Results shown here
+
+  Complete the form and click “calculate repayments” to see what 
+  your monthly repayments would be. -->
+
+    <!-- Empty results end -->
+
+    <!-- Completed results start -->
+
+    <!-- Your results
+
+  Your results are shown below based on the information you provided. 
+  To adjust the results, edit the form and click “calculate repayments” again.
+
+  Your monthly repayments
+
+  Total you'll repay over the term -->
+
+    <!-- Completed results end -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Parvez Hasan</a>.
+    </div>
+    <script src="./script.js" defer></script>
+  </body>
+</html>
